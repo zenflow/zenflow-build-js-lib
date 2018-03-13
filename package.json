@@ -1,0 +1,53 @@
+{
+  "name": "zenflow-build-js-lib",
+  "version": "0.0.0",
+  "description": "A standard build for js libs",
+  "bin": {
+    "zenflow-build-js-lib": "cli.js"
+  },
+  "files": [
+    "cli.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/zenflow-build-js-lib.git"
+  },
+  "keywords": [
+    "zenflow",
+    "script",
+    "standard",
+    "build",
+    "bundle",
+    "js",
+    "javascript",
+    "lib",
+    "library"
+  ],
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/zenflow-build-js-lib/issues"
+  },
+  "homepage": "https://github.com/zenflow/zenflow-build-js-lib#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "del": "^3.0.0",
+    "rollup": "^0.56.5",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-filesize": "^1.5.0",
+    "rollup-plugin-node-resolve": "^3.2.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "slash": "^1.0.0"
+  }
+}
