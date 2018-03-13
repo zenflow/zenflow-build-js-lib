@@ -2,6 +2,7 @@
 
 - specify targets from `package.engines.node` and `package.browserlist`
 - **TESTS!!!**
+- show file size stats
 - `--minify`/`--no-minify` flags (defaulting to not minify)
 - `--format=cjs,es` flag (defaulting to cjs,es,umd)
 - `--watch` flag
