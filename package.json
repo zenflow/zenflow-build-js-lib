@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "A standard build for js libs",
   "bin": "cli.js",
+  "main": "lib/main.js",
   "files": [
     "cli.js",
     "lib"
