@@ -1,5 +1,7 @@
 # zenflow-build-js-lib
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zenflow/zenflow-build-js-lib.svg)](https://greenkeeper.io/)
+
 A zero-config opinionated and awesome build system for portable js libs
 
 ## Rules
