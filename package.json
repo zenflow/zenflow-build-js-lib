@@ -5,13 +5,15 @@
   "bin": "cli.js",
   "main": "lib/main.js",
   "files": [
+    "lib",
     "cli.js",
-    "lib"
+    "CHANGELOG.md"
   ],
   "scripts": {
     "fix": "zenflow-lint-js --fix",
     "lint": "zenflow-lint-js",
-    "test": "npm run lint"
+    "test-only": "jest",
+    "test": "npm run lint && npm run test-only"
   },
   "repository": {
     "type": "git",
@@ -51,6 +53,10 @@
     "slash": "^1.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.1",
+    "@semantic-release/git": "^4.0.1",
+    "jest": "^23.0.0-alpha.0",
+    "semantic-release": "^15.0.3",
     "zenflow-lint-js": "^1.0.0"
   }
 }
