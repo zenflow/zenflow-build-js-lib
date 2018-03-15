@@ -1,5 +1,6 @@
 # zenflow-build-js-lib
-A standard build for js libs
+
+A zero-config opinionated and awesome build system for portable js libs
 
 ## Rules
    - Entry point must be `src/index.js`
