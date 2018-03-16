@@ -1,7 +1,6 @@
 # TODO
 
 - specify targets from `package.engines.node` and `package.browserlist`
-- **TESTS!!!**
 - show file size stats
 - `--watch` flag
 - defaults for package.zenflowConfig settings

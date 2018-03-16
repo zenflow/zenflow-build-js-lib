@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixtures/modules snapshot (A) evaluated cjs 1`] = `2.5000000000000004`;
+
+exports[`fixtures/modules snapshot (A) evaluated umd 1`] = `2.5000000000000004`;
+
+exports[`fixtures/modules snapshot (B) built cjs 1`] = `
+"/** @preserve
+  * package: modules v0.0.0
+  * file: dist/modules.cjs.js
+  * homepage: HOMEPAGE
+  * license: LICENSE
+  **/
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var SQRT2 = _interopDefault(require('const-sqrt-two'));
+
+// sqrt(1/2)
+
+var SQRT_HALF = 7.07106781186547524400844362104849039284835937688474036588339868995366239231053519425193767163820786367506923115e-01;
+
+// EXPORTS //
+
+var lib = SQRT_HALF;
+
+var square = (function (number) {
+  return number * number;
+});
+
+var index = square(lib) + square(SQRT2);
+
+module.exports = index;
+//# sourceMappingURL=modules.cjs.js.map
+"
+`;
+
+exports[`fixtures/modules snapshot (B) built es 1`] = `
+"/** @preserve
+  * package: modules v0.0.0
+  * file: dist/modules.es.js
+  * homepage: HOMEPAGE
+  * license: LICENSE
+  **/
+import SQRT2 from 'const-sqrt-two';
+
+// sqrt(1/2)
+
+var SQRT_HALF = 7.07106781186547524400844362104849039284835937688474036588339868995366239231053519425193767163820786367506923115e-01;
+
+// EXPORTS //
+
+var lib = SQRT_HALF;
+
+var square = (function (number) {
+  return number * number;
+});
+
+var index = square(lib) + square(SQRT2);
+
+export default index;
+//# sourceMappingURL=modules.es.js.map
+"
+`;
+
+exports[`fixtures/modules snapshot (B) built umd 1`] = `
+"/** @preserve
+  * package: modules v0.0.0
+  * file: dist/modules.umd.js
+  * homepage: HOMEPAGE
+  * license: LICENSE
+  **/
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('const-sqrt-two')) :
+	typeof define === 'function' && define.amd ? define(['const-sqrt-two'], factory) :
+	(global._false_ = factory(global._false_));
+}(this, (function (SQRT2) { 'use strict';
+
+	SQRT2 = SQRT2 && SQRT2.hasOwnProperty('default') ? SQRT2['default'] : SQRT2;
+
+	// sqrt(1/2)
+
+	var SQRT_HALF = 7.07106781186547524400844362104849039284835937688474036588339868995366239231053519425193767163820786367506923115e-01;
+
+	// EXPORTS //
+
+	var lib = SQRT_HALF;
+
+	var square = (function (number) {
+	  return number * number;
+	});
+
+	var index = square(lib) + square(SQRT2);
+
+	return index;
+
+})));
+//# sourceMappingURL=modules.umd.js.map
+"
+`;
