@@ -12,8 +12,9 @@
   "scripts": {
     "fix": "zenflow-lint-js --fix",
     "lint": "zenflow-lint-js",
-    "test-only": "jest",
-    "test": "npm run lint && npm run test-only"
+    "test-only": "jest --verbose --ci",
+    "test": "npm run lint && npm run test-only",
+    "dev": "npm run fix && jest --verbose --updateSnapshot --watch --notify"
   },
   "repository": {
     "type": "git",
