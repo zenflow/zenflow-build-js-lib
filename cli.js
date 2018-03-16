@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-const path = require('path')
+const minimist = require('minimist')
+const build = require('./lib/build')
 
-const cwd = process.cwd()
-const args = process.argv.slice(2)
-const distDir = path.join(cwd, 'dist')
-
-require('./lib/main')({ cwd, args, distDir }).catch(error => {
+build({
+  log: console.log,
+  cwd: process.cwd(),
+  args: minimist(process.argv.slice(2)),
+}).catch(error => {
   console.error(error)
   process.exit(1)
 })
