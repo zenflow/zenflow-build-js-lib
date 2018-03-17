@@ -1,3 +1,11 @@
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v0.4.0...v0.4.1) (2018-03-17)
+
+
+### Bug Fixes
+
+* **banner:** dont require homepage and license, just print it when available ([994d674](https://github.com/zenflow/zenflow-build-js-lib/commit/994d674))
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v0.3.0...v0.4.0) (2018-03-17)
 
