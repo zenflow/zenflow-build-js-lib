@@ -11,6 +11,7 @@ exports[`minimal snapshot (B) built cjs 1`] = `
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
+
 'use strict';
 
 var format = (function (words) {
@@ -34,6 +35,7 @@ exports[`minimal snapshot (B) built es 1`] = `
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
+
 var format = (function (words) {
   return words.join(' ');
 });
@@ -55,6 +57,7 @@ exports[`minimal snapshot (B) built umd 1`] = `
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
+
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :

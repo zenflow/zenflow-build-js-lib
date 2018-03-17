@@ -7,6 +7,7 @@ exports[`config-globals snapshot built umd 1`] = `
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
+
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('const-sqrt-half'), require('const-sqrt-two')) :
 	typeof define === 'function' && define.amd ? define(['const-sqrt-half', 'const-sqrt-two'], factory) :
