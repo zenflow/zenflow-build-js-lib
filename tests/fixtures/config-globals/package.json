@@ -2,8 +2,6 @@
   "private": true,
   "name": "config-globals-fixture",
   "version": "0.0.0",
-  "main": "dist/config-globals-fixture.cjs.js",
-  "module": "dist/config-globals-fixture.es.js",
   "browser": "dist/config-globals-fixture.umd.js",
   "dependencies": {
     "const-sqrt-half": "^1.0.0",

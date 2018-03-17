@@ -17,16 +17,16 @@ A minimal-config opinionated and awesome build system for portable js libs
 - babel, babel-preset-env, babel-preset-react
 - cjs es & umd formats
 - pretty banners with package name & version, filename, homepage & license
-- optional minified builds
-- optional sourcemaps
+- `--minify` option
+- `--sourcemaps` option
 
 ## Conventions
 
 - entry point will be `src/index.js`
 - externals (non-bundled imports) will be `"dependencies"` and `"peerDependencies"`
-- package `"main"` refers to cjs format file
-- package `"module"` refers to es format file
-- package `"browser"` refers to umd format file
+- package `"main"` refers to cjs format file (optional)
+- package `"module"` refers to es format file (optional)
+- package `"browser"` refers to umd format file (optional)
 - global export name will be camelized package name
 - global import names will be camelized package names *unless* specified in `pkg.zenflowConfig.build.globals` option in `package.json`
 
