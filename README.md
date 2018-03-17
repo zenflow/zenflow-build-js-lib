@@ -10,24 +10,67 @@ A minimal-config opinionated and awesome build system for portable js libs
 ![semantic-release badge](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Facts
+## Features
+
+- convention over configuration
+- rollup
+- babel, babel-preset-env, babel-preset-react
+- cjs es & umd formats
+- pretty banners with package name & version, filename, homepage & license
+- optional minified builds
+- optional sourcemaps
+
+## Conventions
 
 - entry point will be `src/index.js`
+- externals (non-bundled imports) will be `"dependencies"` and `"peerDependencies"`
+- package `"main"` refers to cjs format file
+- package `"module"` refers to es format file
+- package `"browser"` refers to umd format file
 - global export name will be camelized package name
-- "dependencies" and "peerDependencies" package fields define externals
+- global import names will be camelized package names *unless* specified in `pkg.zenflowConfig.build.globals` option in `package.json`
 
-## Rules
+## CLI
 
-- `package.json` fields must be as such:
-  - "main": `dist/${pkg.name}.cjs.js`
-  - "module": `dist/${pkg.name}.es.js`
-  - "browser": `dist/${pkg.name}.umd.js`
-- other required `package.json` fields:
-  - "homepage"
-  - "license"
+Simply `zenflow-build-js-lib [--minify] [--sourcemap]`
 
 ## Configs
 
-In your `package.json`, at `pkg.zenflowConfig.build` add any of the following options:
+This project strives to eliminate as much configuration as possible, but sometimes it's needed.
 
-- `globals`: Object mapping external package names to their global export names (i.e. "react-dom" -> "ReactDOM")
+In your `package.json`, at `pkg.zenflowConfig.build`, add any of the following options:
+
+- `"globals"` - Object mapping external package names to their global export names (e.g. `{"react-dom": "ReactDOM"}`)
+
+## Example
+
+package.json
+
+```json
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "dist/example.cjs.js",
+  "module": "dist/example.es.js",
+  "browser": "dist/example.umd.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "HOMEPAGE",
+  "license": "LICENSE",
+  "scripts": {
+    "build": "zenflow-build-js-lib --minify --sourcemap"
+  },
+  "devDependencies": {
+    "zenflow-build-js-lib": "^1.0.0"
+  },
+  "zenflowConfig": {
+    "build": {
+      "globals": {
+        "react-dom": "ReactDOM"
+      }
+    }
+  }
+}
+
+```
