@@ -1,0 +1,12 @@
+{
+  "name": "minimal-fixture",
+  "version": "0.0.0",
+  "main": "dist/minimal-fixture.cjs.js",
+  "module": "dist/minimal-fixture.es.js",
+  "browser": "dist/minimal-fixture.umd.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "HOMEPAGE",
+  "license": "LICENSE"
+}

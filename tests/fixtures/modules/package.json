@@ -1,9 +1,9 @@
 {
   "name": "modules-fixture",
   "version": "0.0.0",
-  "main": "dist/modules.cjs.js",
-  "module": "dist/modules.es.js",
-  "browser": "dist/modules.umd.js",
+  "main": "dist/modules-fixture.cjs.js",
+  "module": "dist/modules-fixture.es.js",
+  "browser": "dist/modules-fixture.umd.js",
   "files": [
     "dist/**/*"
   ],

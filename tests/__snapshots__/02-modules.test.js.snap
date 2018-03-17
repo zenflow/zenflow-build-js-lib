@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fixtures/modules snapshot (A) evaluated cjs 1`] = `
+exports[`modules snapshot (A) evaluated cjs 1`] = `
 Object {
   "SQR_SQRT2": 2.0000000000000004,
   "SQR_SQRT_HALF": 0.5000000000000001,
 }
 `;
 
-exports[`fixtures/modules snapshot (A) evaluated umd 1`] = `
+exports[`modules snapshot (A) evaluated umd 1`] = `
 Object {
   "SQR_SQRT2": 2.0000000000000004,
   "SQR_SQRT_HALF": 0.5000000000000001,
 }
 `;
 
-exports[`fixtures/modules snapshot (B) built cjs 1`] = `
+exports[`modules snapshot (B) built cjs 1`] = `
 "/** @preserve
   * package: modules-fixture v0.0.0
-  * file: dist/modules.cjs.js
+  * file: dist/modules-fixture.cjs.js
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
@@ -46,14 +46,13 @@ var SQR_SQRT2 = square(SQRT2);
 
 exports.SQR_SQRT_HALF = SQR_SQRT_HALF;
 exports.SQR_SQRT2 = SQR_SQRT2;
-//# sourceMappingURL=modules.cjs.js.map
 "
 `;
 
-exports[`fixtures/modules snapshot (B) built es 1`] = `
+exports[`modules snapshot (B) built es 1`] = `
 "/** @preserve
   * package: modules-fixture v0.0.0
-  * file: dist/modules.es.js
+  * file: dist/modules-fixture.es.js
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
@@ -75,14 +74,13 @@ var SQR_SQRT_HALF = square(lib);
 var SQR_SQRT2 = square(SQRT2);
 
 export { SQR_SQRT_HALF, SQR_SQRT2 };
-//# sourceMappingURL=modules.es.js.map
 "
 `;
 
-exports[`fixtures/modules snapshot (B) built umd 1`] = `
+exports[`modules snapshot (B) built umd 1`] = `
 "/** @preserve
   * package: modules-fixture v0.0.0
-  * file: dist/modules.umd.js
+  * file: dist/modules-fixture.umd.js
   * homepage: HOMEPAGE
   * license: LICENSE
   **/
@@ -115,6 +113,5 @@ exports[`fixtures/modules snapshot (B) built umd 1`] = `
 	Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=modules.umd.js.map
 "
 `;

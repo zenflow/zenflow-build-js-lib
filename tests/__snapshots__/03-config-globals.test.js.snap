@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`config-globals snapshot built umd 1`] = `
+"/** @preserve
+  * package: config-globals-fixture v0.0.0
+  * file: dist/config-globals-fixture.umd.js
+  * homepage: HOMEPAGE
+  * license: LICENSE
+  **/
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('const-sqrt-half'), require('const-sqrt-two')) :
+	typeof define === 'function' && define.amd ? define(['const-sqrt-half', 'const-sqrt-two'], factory) :
+	(global.configGlobalsFixture = factory(global.constSqrtHalf,global.customConstSqrtTwo));
+}(this, (function (SQRT_HALF,SQRT2) { 'use strict';
+
+	SQRT_HALF = SQRT_HALF && SQRT_HALF.hasOwnProperty('default') ? SQRT_HALF['default'] : SQRT_HALF;
+	SQRT2 = SQRT2 && SQRT2.hasOwnProperty('default') ? SQRT2['default'] : SQRT2;
+
+	var index = SQRT_HALF + SQRT2;
+
+	return index;
+
+})));
+"
+`;
