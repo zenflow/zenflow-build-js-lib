@@ -1,8 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fixtures/modules snapshot (A) evaluated cjs 1`] = `2.5000000000000004`;
+exports[`fixtures/modules snapshot (A) evaluated cjs 1`] = `
+Object {
+  "SQR_SQRT2": 2.0000000000000004,
+  "SQR_SQRT_HALF": 0.5000000000000001,
+}
+`;
 
-exports[`fixtures/modules snapshot (A) evaluated umd 1`] = `2.5000000000000004`;
+exports[`fixtures/modules snapshot (A) evaluated umd 1`] = `
+Object {
+  "SQR_SQRT2": 2.0000000000000004,
+  "SQR_SQRT_HALF": 0.5000000000000001,
+}
+`;
 
 exports[`fixtures/modules snapshot (B) built cjs 1`] = `
 "/** @preserve
@@ -12,6 +22,8 @@ exports[`fixtures/modules snapshot (B) built cjs 1`] = `
   * license: LICENSE
   **/
 'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
@@ -29,9 +41,11 @@ var square = (function (number) {
   return number * number;
 });
 
-var index = square(lib) + square(SQRT2);
+var SQR_SQRT_HALF = square(lib);
+var SQR_SQRT2 = square(SQRT2);
 
-module.exports = index;
+exports.SQR_SQRT_HALF = SQR_SQRT_HALF;
+exports.SQR_SQRT2 = SQR_SQRT2;
 //# sourceMappingURL=modules.cjs.js.map
 "
 `;
@@ -57,9 +71,10 @@ var square = (function (number) {
   return number * number;
 });
 
-var index = square(lib) + square(SQRT2);
+var SQR_SQRT_HALF = square(lib);
+var SQR_SQRT2 = square(SQRT2);
 
-export default index;
+export { SQR_SQRT_HALF, SQR_SQRT2 };
 //# sourceMappingURL=modules.es.js.map
 "
 `;
@@ -72,10 +87,10 @@ exports[`fixtures/modules snapshot (B) built umd 1`] = `
   * license: LICENSE
   **/
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('const-sqrt-two')) :
-	typeof define === 'function' && define.amd ? define(['const-sqrt-two'], factory) :
-	(global._false_ = factory(global._false_));
-}(this, (function (SQRT2) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('const-sqrt-two')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'const-sqrt-two'], factory) :
+	(factory((global._false_ = {}),global._false_));
+}(this, (function (exports,SQRT2) { 'use strict';
 
 	SQRT2 = SQRT2 && SQRT2.hasOwnProperty('default') ? SQRT2['default'] : SQRT2;
 
@@ -91,9 +106,13 @@ exports[`fixtures/modules snapshot (B) built umd 1`] = `
 	  return number * number;
 	});
 
-	var index = square(lib) + square(SQRT2);
+	var SQR_SQRT_HALF = square(lib);
+	var SQR_SQRT2 = square(SQRT2);
 
-	return index;
+	exports.SQR_SQRT_HALF = SQR_SQRT_HALF;
+	exports.SQR_SQRT2 = SQR_SQRT2;
+
+	Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 //# sourceMappingURL=modules.umd.js.map
