@@ -1,9 +1,9 @@
 /* eslint-env jest */
 
 const path = require('path')
+const { flatten, repeat } = require('ramda')
 const buildFixture = require('./util/buildFixture')
 const { readFile, fileExists } = require('./util/fs')
-const { flatmap, repeat } = require('./util/util')
 
 describe('fixtures/modules', () => {
   let tempDir
@@ -31,16 +31,18 @@ describe('fixtures/modules', () => {
     expect(await readFile(file)).toMatchSnapshot()
   })
   test('minified versions and source maps exist in each format', async () => {
-    const files = flatmap(['cjs', 'es', 'umd'], format =>
-      flatmap([false, true], minify =>
-        flatmap([false, true], sourcemap =>
-          path.join(
-            tempDir,
-            'dist',
-            `modules.${format}` +
-              (minify ? '.min' : '') +
-              '.js' +
-              (sourcemap ? '.map' : ''),
+    const files = flatten(
+      ['cjs', 'es', 'umd'].map(format =>
+        [false, true].map(minify =>
+          [false, true].map(sourcemap =>
+            path.join(
+              tempDir,
+              'dist',
+              `modules.${format}` +
+                (minify ? '.min' : '') +
+                '.js' +
+                (sourcemap ? '.map' : ''),
+            ),
           ),
         ),
       ),
