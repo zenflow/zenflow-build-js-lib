@@ -1,5 +1,5 @@
 {
-  "name": "modules",
+  "name": "modules-fixture",
   "version": "0.0.0",
   "main": "dist/modules.cjs.js",
   "module": "dist/modules.es.js",
@@ -10,18 +10,9 @@
   "homepage": "HOMEPAGE",
   "license": "LICENSE",
   "dependencies": {
-    "const-sqrt-half": "^1.0.0",
     "const-sqrt-two": "^1.0.0"
   },
-  "zenflowConfig": {
-    "build": {
-      "externals": [
-        "const-sqrt-two"
-      ],
-      "globals": {
-        "const-sqrt-two": "_false_"
-      },
-      "global": "_false_"
-    }
+  "devDependencies": {
+    "const-sqrt-half": "^1.0.0"
   }
 }
