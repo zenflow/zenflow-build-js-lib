@@ -8,8 +8,6 @@ exports[`minimal snapshot (B) built cjs 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.cjs.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 
 'use strict';
@@ -32,8 +30,6 @@ exports[`minimal snapshot (B) built es 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.es.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 
 var format = (function (words) {
@@ -54,8 +50,6 @@ exports[`minimal snapshot (B) built umd 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.umd.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 
 (function (global, factory) {
@@ -84,8 +78,6 @@ exports[`minimal snapshot (C) built cjs.min 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.cjs.min.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 \\"use strict\\";var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);module.exports=index;
 //# sourceMappingURL=minimal-fixture.cjs.min.js.map
@@ -96,8 +88,6 @@ exports[`minimal snapshot (C) built es.min 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.es.min.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);export default index;
 //# sourceMappingURL=minimal-fixture.es.min.js.map
@@ -108,8 +98,6 @@ exports[`minimal snapshot (C) built umd.min 1`] = `
 "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.umd.min.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 !function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):e.minimalFixture=n()}(this,function(){\\"use strict\\";return[\\"foo\\",\\"bar\\"].join(\\" \\")});
 //# sourceMappingURL=minimal-fixture.umd.min.js.map

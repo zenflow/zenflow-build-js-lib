@@ -1,12 +1,10 @@
 {
+  "private": true,
   "name": "modules-fixture",
   "version": "0.0.0",
   "main": "dist/modules-fixture.cjs.js",
   "module": "dist/modules-fixture.es.js",
   "browser": "dist/modules-fixture.umd.js",
-  "files": [
-    "dist/**/*"
-  ],
   "homepage": "HOMEPAGE",
   "license": "LICENSE",
   "dependencies": {

@@ -4,8 +4,6 @@ exports[`config-globals snapshot built umd 1`] = `
 "/** @preserve
   * package: config-globals-fixture v0.0.0
   * file: dist/config-globals-fixture.umd.js
-  * homepage: HOMEPAGE
-  * license: LICENSE
   **/
 
 (function (global, factory) {
