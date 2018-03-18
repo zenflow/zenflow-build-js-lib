@@ -61,12 +61,17 @@ package.json
   "scripts": {
     "build": "zenflow-build-js-lib --minify --sourcemap"
   },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
   "devDependencies": {
     "zenflow-build-js-lib": "^1.0.0"
   },
   "zenflowConfig": {
     "build": {
       "globals": {
+        "react": "React",
         "react-dom": "ReactDOM"
       }
     }
