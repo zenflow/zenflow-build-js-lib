@@ -68,6 +68,6 @@
     "recursive-copy": "^2.0.9",
     "semantic-release": "^15.1.2",
     "tempy": "^0.2.1",
-    "zenflow-lint-js": "^1.0.0"
+    "zenflow-lint-js": "^2.0.0"
   }
 }
