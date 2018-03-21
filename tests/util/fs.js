@@ -7,8 +7,10 @@ const readFile = file => fsReadFile(file, 'utf8')
 const fsStat = promisify(fs.stat)
 const tryStat = file => fsStat(file).catch(() => null)
 const fileExists = file => tryStat(file).then(Boolean)
+const readdir = promisify(fs.readdir)
 
 module.exports = {
   readFile,
   fileExists,
+  readdir,
 }

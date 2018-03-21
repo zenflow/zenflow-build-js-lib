@@ -1,11 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`minimal snapshot (A) evaluated cjs 1`] = `"foo bar"`;
-
-exports[`minimal snapshot (A) evaluated umd 1`] = `"foo bar"`;
-
-exports[`minimal snapshot (B) built cjs 1`] = `
-"/** @preserve
+exports[`minimal snapshot 1`] = `
+Array [
+  "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.cjs.js
   **/
@@ -23,11 +20,15 @@ var index = format([foo, bar]);
 
 module.exports = index;
 //# sourceMappingURL=minimal-fixture.cjs.js.map
-"
-`;
-
-exports[`minimal snapshot (B) built es 1`] = `
-"/** @preserve
+",
+  "/** @preserve
+  * package: minimal-fixture v0.0.0
+  * file: dist/minimal-fixture.cjs.min.js
+  **/
+\\"use strict\\";var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);module.exports=index;
+//# sourceMappingURL=minimal-fixture.cjs.min.js.map
+",
+  "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.es.js
   **/
@@ -43,11 +44,15 @@ var index = format([foo, bar]);
 
 export default index;
 //# sourceMappingURL=minimal-fixture.es.js.map
-"
-`;
-
-exports[`minimal snapshot (B) built umd 1`] = `
-"/** @preserve
+",
+  "/** @preserve
+  * package: minimal-fixture v0.0.0
+  * file: dist/minimal-fixture.es.min.js
+  **/
+var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);export default index;
+//# sourceMappingURL=minimal-fixture.es.min.js.map
+",
+  "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.umd.js
   **/
@@ -71,35 +76,13 @@ exports[`minimal snapshot (B) built umd 1`] = `
 
 })));
 //# sourceMappingURL=minimal-fixture.umd.js.map
-"
-`;
-
-exports[`minimal snapshot (C) built cjs.min 1`] = `
-"/** @preserve
-  * package: minimal-fixture v0.0.0
-  * file: dist/minimal-fixture.cjs.min.js
-  **/
-\\"use strict\\";var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);module.exports=index;
-//# sourceMappingURL=minimal-fixture.cjs.min.js.map
-"
-`;
-
-exports[`minimal snapshot (C) built es.min 1`] = `
-"/** @preserve
-  * package: minimal-fixture v0.0.0
-  * file: dist/minimal-fixture.es.min.js
-  **/
-var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);export default index;
-//# sourceMappingURL=minimal-fixture.es.min.js.map
-"
-`;
-
-exports[`minimal snapshot (C) built umd.min 1`] = `
-"/** @preserve
+",
+  "/** @preserve
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.umd.min.js
   **/
 !function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):e.minimalFixture=n()}(this,function(){\\"use strict\\";return[\\"foo\\",\\"bar\\"].join(\\" \\")});
 //# sourceMappingURL=minimal-fixture.umd.min.js.map
-"
+",
+]
 `;

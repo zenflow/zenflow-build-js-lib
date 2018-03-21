@@ -1,60 +1,50 @@
 /* eslint-env jest */
 
 const path = require('path')
-const { flatten, repeat } = require('ramda')
+const { flatten } = require('ramda')
 const buildFixture = require('./util/buildFixture')
-const { readFile, fileExists } = require('./util/fs')
+const { readFile, readdir } = require('./util/fs')
 
 describe('minimal', () => {
   let tempDir
   beforeAll(async () => {
     tempDir = await buildFixture('minimal', { extras: true })
   })
-  test('snapshot (A) evaluated cjs', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.cjs.js')
-    expect(require(file)).toMatchSnapshot()
-  })
-  test('snapshot (A) evaluated umd', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.umd.js')
-    expect(require(file)).toMatchSnapshot()
-  })
-  test('snapshot (B) built cjs', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.cjs.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('snapshot (B) built es', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.es.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('snapshot (B) built umd', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.umd.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('snapshot (C) built cjs.min', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.cjs.min.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('snapshot (C) built es.min', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.es.min.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('snapshot (C) built umd.min', async () => {
-    const file = path.join(tempDir, 'dist/minimal-fixture.umd.min.js')
-    expect(await readFile(file)).toMatchSnapshot()
-  })
-  test('source maps exist for each format', async () => {
-    const files = flatten(
-      ['cjs', 'es', 'umd'].map(format =>
-        [false, true].map(minify =>
-          path.join(
-            tempDir,
-            'dist',
-            `minimal-fixture.${format}` + (minify ? '.min' : '') + '.js.map',
+  test('have each file listed in package.json, minified and non-minified, plus sourcemaps', async () => {
+    expect(await readdir(path.join(tempDir, 'dist'))).toEqual(
+      flatten(
+        ['cjs', 'es', 'umd'].map(format =>
+          [false, true].map(minify =>
+            [false, true].map(
+              sourcemap =>
+                'minimal-fixture.' +
+                format +
+                (minify ? '.min' : '') +
+                '.js' +
+                (sourcemap ? '.map' : ''),
+            ),
           ),
         ),
       ),
     )
-    const filesExist = await Promise.all(files.map(fileExists))
-    expect(filesExist).toEqual(repeat(true, 3 * 2))
+  })
+  test('evaluated module exports', async () => {
+    const cjsFile = path.join(tempDir, 'dist/minimal-fixture.cjs.js')
+    expect(require(cjsFile)).toEqual('foo bar')
+    const umdFile = path.join(tempDir, 'dist/minimal-fixture.umd.js')
+    expect(require(umdFile)).toEqual('foo bar')
+  })
+  test('snapshot', async () => {
+    const files = await Promise.all(
+      [
+        'dist/minimal-fixture.cjs.js',
+        'dist/minimal-fixture.cjs.min.js',
+        'dist/minimal-fixture.es.js',
+        'dist/minimal-fixture.es.min.js',
+        'dist/minimal-fixture.umd.js',
+        'dist/minimal-fixture.umd.min.js',
+      ].map(file => readFile(path.join(tempDir, file))),
+    )
+    expect(files).toMatchSnapshot()
   })
 })
