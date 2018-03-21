@@ -4,7 +4,7 @@ const execa = require('execa')
 const recursiveCopy = require('recursive-copy')
 const build = require('../../lib/zenflow-build-js-lib')
 
-const _buildFixture = pMemoize(async ({ fixture, extras }) => {
+const _buildFixture = pMemoize(async ({ fixture, args }) => {
   const fixtureDir = `tests/fixtures/${fixture}`
   const tempDir = tempy.directory()
   await recursiveCopy(fixtureDir, tempDir)
@@ -12,10 +12,7 @@ const _buildFixture = pMemoize(async ({ fixture, extras }) => {
   await build({
     log: console.log,
     cwd: tempDir,
-    args: {
-      minify: extras,
-      sourcemap: extras,
-    },
+    args,
   })
   return tempDir
 })
@@ -27,12 +24,11 @@ const _buildFixture = pMemoize(async ({ fixture, extras }) => {
  * @param extras build .min.js and .js.map files
  * @returns tempDir Where the fixture is installs
  */
-function buildFixture(fixture, { extras } = {}) {
+function buildFixture(fixture, args = {}) {
   if (typeof fixture !== 'string') {
     throw new TypeError('buildFixture: `fixture` must be a string')
   }
-  extras = Boolean(extras)
-  return _buildFixture({ fixture, extras })
+  return _buildFixture({ fixture, args })
 }
 
 module.exports = buildFixture

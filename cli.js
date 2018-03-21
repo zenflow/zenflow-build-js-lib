@@ -9,8 +9,7 @@ build({
   args: Object.assign(
     {
       debug: false,
-      minify: false,
-      sourcemap: false,
+      prod: false,
     },
     minimist(process.argv.slice(2)),
   ),

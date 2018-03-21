@@ -8,7 +8,7 @@ const { readFile, readdir } = require('./util/fs')
 describe('minimal', () => {
   let tempDir
   beforeAll(async () => {
-    tempDir = await buildFixture('minimal', { extras: true })
+    tempDir = await buildFixture('minimal', { prod: true })
   })
   test('have each file listed in package.json, minified and non-minified, plus sourcemaps', async () => {
     expect(await readdir(path.join(tempDir, 'dist'))).toEqual(
