@@ -2,7 +2,7 @@ const pMemoize = require('p-memoize')
 const tempy = require('tempy')
 const execa = require('execa')
 const recursiveCopy = require('recursive-copy')
-const build = require('../../lib/build')
+const build = require('../../lib/zenflow-build-js-lib')
 
 const _buildFixture = pMemoize(async ({ fixture, extras }) => {
   const fixtureDir = `tests/fixtures/${fixture}`

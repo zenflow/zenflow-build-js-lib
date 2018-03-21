@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const minimist = require('minimist')
-const build = require('./lib/build')
+const build = require('./lib/zenflow-build-js-lib')
 
 build({
   log: console.log,
