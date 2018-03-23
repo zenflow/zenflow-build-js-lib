@@ -1,3 +1,16 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v1.0.0...v2.0.0) (2018-03-23)
+
+
+### Features
+
+* **cli:** combine --minify and --sourcemap switches into --prod switch ([c02c3ea](https://github.com/zenflow/zenflow-build-js-lib/commit/c02c3ea))
+
+
+### BREAKING CHANGES
+
+* **cli:** --prod switch replaces --minify and --sourcemap
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/zenflow/zenflow-build-js-lib/compare/v0.4.1...v0.4.2) (2018-03-17)
 
