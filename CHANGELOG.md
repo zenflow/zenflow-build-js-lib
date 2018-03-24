@@ -1,3 +1,11 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.0...v2.0.1) (2018-03-24)
+
+
+### Bug Fixes
+
+* **package:** update slash to version 2.0.0 ([#13](https://github.com/zenflow/zenflow-build-js-lib/issues/13)) ([eac5b0b](https://github.com/zenflow/zenflow-build-js-lib/commit/eac5b0b))
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v1.0.0...v2.0.0) (2018-03-23)
 
