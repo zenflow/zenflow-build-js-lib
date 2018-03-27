@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "A zero-config opinionated and awesome build system for portable js libs",
   "bin": "cli.js",
-  "main": "lib/zenflow-build-js-lib.js",
+  "main": "lib/buildJsLib.js",
   "files": [
     "lib",
     "cli.js",

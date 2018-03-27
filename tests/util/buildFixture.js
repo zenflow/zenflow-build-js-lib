@@ -2,14 +2,14 @@ const pMemoize = require('p-memoize')
 const tempy = require('tempy')
 const execa = require('execa')
 const recursiveCopy = require('recursive-copy')
-const build = require('../../lib/zenflow-build-js-lib')
+const buildJsLib = require('../../lib/buildJsLib')
 
 const _buildFixture = pMemoize(async ({ fixture, args }) => {
   const fixtureDir = `tests/fixtures/${fixture}`
   const tempDir = tempy.directory()
   await recursiveCopy(fixtureDir, tempDir)
   await execa.shell(`npm install`, { cwd: tempDir })
-  await build({
+  await buildJsLib({
     log: console.log,
     cwd: tempDir,
     args,

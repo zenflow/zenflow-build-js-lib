@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const minimist = require('minimist')
-const build = require('./lib/zenflow-build-js-lib')
+const buildJsLib = require('./lib/buildJsLib')
 
-build({
+buildJsLib({
   log: console.log,
   cwd: process.cwd(),
   args: Object.assign(
