@@ -1,3 +1,11 @@
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.1.0...v2.1.1) (2018-03-29)
+
+
+### Bug Fixes
+
+* **babel:** fix exported config to be a custom preset ([24b1c8e](https://github.com/zenflow/zenflow-build-js-lib/commit/24b1c8e))
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.1...v2.1.0) (2018-03-29)
 
