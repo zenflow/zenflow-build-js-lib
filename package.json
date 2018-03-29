@@ -6,6 +6,7 @@
   "main": "lib/buildJsLib.js",
   "files": [
     "lib",
+    "babel.js",
     "cli.js",
     "CHANGELOG.md"
   ],
