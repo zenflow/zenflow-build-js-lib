@@ -1,3 +1,11 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.1...v2.1.0) (2018-03-29)
+
+
+### Features
+
+* **babel:** expose babel config as `zenflow-build-js-lib/babel` ([403dd8d](https://github.com/zenflow/zenflow-build-js-lib/commit/403dd8d))
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.0...v2.0.1) (2018-03-24)
 
