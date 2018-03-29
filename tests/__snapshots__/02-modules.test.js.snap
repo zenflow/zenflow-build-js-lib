@@ -25,12 +25,10 @@ var SQRT_HALF = 7.07106781186547524400844362104849039284835937688474036588339868
 
 var lib = SQRT_HALF;
 
-var square = (function (number) {
-  return number * number;
-});
+var square = (number => number * number);
 
-var SQR_SQRT_HALF = square(lib);
-var SQR_SQRT2 = square(SQRT2);
+const SQR_SQRT_HALF = square(lib);
+const SQR_SQRT2 = square(SQRT2);
 
 exports.SQR_SQRT_HALF = SQR_SQRT_HALF;
 exports.SQR_SQRT2 = SQR_SQRT2;
@@ -52,12 +50,10 @@ var SQRT_HALF = 7.07106781186547524400844362104849039284835937688474036588339868
 
 var lib = SQRT_HALF;
 
-var square = (function (number) {
-  return number * number;
-});
+var square = (number => number * number);
 
-var SQR_SQRT_HALF = square(lib);
-var SQR_SQRT2 = square(SQRT2);
+const SQR_SQRT_HALF = square(lib);
+const SQR_SQRT2 = square(SQRT2);
 
 export { SQR_SQRT_HALF, SQR_SQRT2 };
 ",
@@ -84,12 +80,10 @@ export { SQR_SQRT_HALF, SQR_SQRT2 };
 
 	var lib = SQRT_HALF;
 
-	var square = (function (number) {
-	  return number * number;
-	});
+	var square = (number => number * number);
 
-	var SQR_SQRT_HALF = square(lib);
-	var SQR_SQRT2 = square(SQRT2);
+	const SQR_SQRT_HALF = square(lib);
+	const SQR_SQRT2 = square(SQRT2);
 
 	exports.SQR_SQRT_HALF = SQR_SQRT_HALF;
 	exports.SQR_SQRT2 = SQR_SQRT2;

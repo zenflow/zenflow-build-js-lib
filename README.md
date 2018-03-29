@@ -13,12 +13,10 @@ A minimal-config opinionated and awesome build system for portable js libs
 ## Features
 
 - convention over configuration
-- rollup
-- babel, babel-preset-env, babel-preset-react
+- rollup under the hood
+- babel 6, with whatever presets and plugins you need
 - cjs es & umd formats
 - pretty banners with package name & version, filename, homepage & license
-- `--minify` option
-- `--sourcemaps` option
 
 ## Conventions
 
@@ -32,7 +30,9 @@ A minimal-config opinionated and awesome build system for portable js libs
 
 ## CLI
 
-Simply `zenflow-build-js-lib [--minify] [--sourcemap]`
+`zenflow-build-js-lib [--prod]`
+
+- `--prod` - "production mode" - produce sourcemaps and additional minified versions of all js files
 
 ## Configs
 

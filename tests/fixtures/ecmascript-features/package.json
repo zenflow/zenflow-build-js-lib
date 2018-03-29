@@ -1,6 +1,0 @@
-{
-  "private": true,
-  "name": "ecmascript-features-fixture",
-  "version": "0.0.0",
-  "main": "dist/ecmascript-features-fixture.cjs.js"
-}

@@ -9,12 +9,10 @@ Array [
 
 'use strict';
 
-var format = (function (words) {
-  return words.join(' ');
-});
+var format = (words => words.join(' '));
 
-var foo = 'foo';
-var bar = 'bar';
+const foo = 'foo';
+const bar = 'bar';
 
 var index = format([foo, bar]);
 
@@ -25,7 +23,7 @@ module.exports = index;
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.cjs.min.js
   **/
-\\"use strict\\";var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);module.exports=index;
+\\"use strict\\";var format=o=>o.join(\\" \\");const foo=\\"foo\\",bar=\\"bar\\";var index=format([foo,bar]);module.exports=index;
 //# sourceMappingURL=minimal-fixture.cjs.min.js.map
 ",
   "/** @preserve
@@ -33,12 +31,10 @@ module.exports = index;
   * file: dist/minimal-fixture.es.js
   **/
 
-var format = (function (words) {
-  return words.join(' ');
-});
+var format = (words => words.join(' '));
 
-var foo = 'foo';
-var bar = 'bar';
+const foo = 'foo';
+const bar = 'bar';
 
 var index = format([foo, bar]);
 
@@ -49,7 +45,7 @@ export default index;
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.es.min.js
   **/
-var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index=format([foo,bar]);export default index;
+var format=o=>o.join(\\" \\");const foo=\\"foo\\",bar=\\"bar\\";var index=format([foo,bar]);export default index;
 //# sourceMappingURL=minimal-fixture.es.min.js.map
 ",
   "/** @preserve
@@ -63,12 +59,10 @@ var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index
 	(global.minimalFixture = factory());
 }(this, (function () { 'use strict';
 
-	var format = (function (words) {
-	  return words.join(' ');
-	});
+	var format = (words => words.join(' '));
 
-	var foo = 'foo';
-	var bar = 'bar';
+	const foo = 'foo';
+	const bar = 'bar';
 
 	var index = format([foo, bar]);
 
@@ -81,7 +75,7 @@ var format=function(o){return o.join(\\" \\")},foo=\\"foo\\",bar=\\"bar\\",index
   * package: minimal-fixture v0.0.0
   * file: dist/minimal-fixture.umd.min.js
   **/
-!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):e.minimalFixture=n()}(this,function(){\\"use strict\\";return[\\"foo\\",\\"bar\\"].join(\\" \\")});
+!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):e.minimalFixture=n()}(this,function(){\\"use strict\\";return(e=>e.join(\\" \\"))([\\"foo\\",\\"bar\\"])});
 //# sourceMappingURL=minimal-fixture.umd.min.js.map
 ",
 ]
