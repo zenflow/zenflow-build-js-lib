@@ -1,3 +1,32 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.1.1...v3.0.0) (2018-03-29)
+
+
+### Features
+
+* **babel:** use a modified version of the projects babel configuration ([c7f946b](https://github.com/zenflow/zenflow-build-js-lib/commit/c7f946b))
+
+
+### BREAKING CHANGES
+
+* **babel:** Now, no presets or plugins are applied by default. You must install them and configure them in .babelrc yourself
+
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.1.0...v2.1.1) (2018-03-29)
+
+
+### Bug Fixes
+
+* **babel:** fix exported config to be a custom preset ([24b1c8e](https://github.com/zenflow/zenflow-build-js-lib/commit/24b1c8e))
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.1...v2.1.0) (2018-03-29)
+
+
+### Features
+
+* **babel:** expose babel config as `zenflow-build-js-lib/babel` ([403dd8d](https://github.com/zenflow/zenflow-build-js-lib/commit/403dd8d))
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.0.0...v2.0.1) (2018-03-24)
 

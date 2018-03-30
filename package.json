@@ -1,11 +1,12 @@
 {
   "name": "zenflow-build-js-lib",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A zero-config opinionated and awesome build system for portable js libs",
   "bin": "cli.js",
   "main": "lib/buildJsLib.js",
   "files": [
     "lib",
+    "babel.js",
     "cli.js",
     "CHANGELOG.md"
   ],
@@ -44,12 +45,9 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "camelcase": "^5.0.0",
     "del": "^3.0.0",
+    "json5": "^1.0.1",
     "minimist": "^1.2.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
