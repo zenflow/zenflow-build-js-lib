@@ -1,3 +1,11 @@
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/zenflow/zenflow-build-js-lib/compare/v3.0.0...v3.0.1) (2018-03-30)
+
+
+### Bug Fixes
+
+* **package:** update camelcase to version 5.0.0 ([#15](https://github.com/zenflow/zenflow-build-js-lib/issues/15)) ([710cfc5](https://github.com/zenflow/zenflow-build-js-lib/commit/710cfc5))
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/zenflow/zenflow-build-js-lib/compare/v2.1.1...v3.0.0) (2018-03-29)
 

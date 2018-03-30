@@ -1,6 +1,6 @@
 {
   "name": "zenflow-build-js-lib",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A zero-config opinionated and awesome build system for portable js libs",
   "bin": "cli.js",
   "main": "lib/buildJsLib.js",
