@@ -59,7 +59,7 @@ package.json
   "homepage": "HOMEPAGE",
   "license": "LICENSE",
   "scripts": {
-    "build": "zenflow-build-js-lib --minify --sourcemap"
+    "build": "zenflow-build-js-lib --prod"
   },
   "peerDependencies": {
     "react": "^16.0.0",
