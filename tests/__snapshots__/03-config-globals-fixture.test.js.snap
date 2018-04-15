@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`config-globals snapshot 1`] = `
+exports[`config-globals-fixture snapshot 1`] = `
 "/** @preserve
   * package: config-globals-fixture v0.0.0
   * file: dist/config-globals-fixture.umd.js

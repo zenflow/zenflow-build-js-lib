@@ -5,7 +5,7 @@ const { flatten } = require('ramda')
 const buildFixture = require('./util/buildFixture')
 const { readFile, readdir } = require('./util/fs')
 
-describe('minimal', () => {
+describe('minimal-fixture', () => {
   let tempDir
   beforeAll(async () => {
     tempDir = await buildFixture('minimal', { prod: true })

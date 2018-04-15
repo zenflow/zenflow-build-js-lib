@@ -4,7 +4,7 @@ const path = require('path')
 const buildFixture = require('./util/buildFixture')
 const { readFile, readdir } = require('./util/fs')
 
-describe('config-globals', () => {
+describe('config-globals-fixture', () => {
   let tempDir
   beforeAll(async () => {
     tempDir = await buildFixture('config-globals')

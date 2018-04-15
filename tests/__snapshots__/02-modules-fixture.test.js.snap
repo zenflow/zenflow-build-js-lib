@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`modules snapshot 1`] = `
+exports[`modules-fixture snapshot 1`] = `
 Array [
   "/** @preserve
   * package: modules-fixture v0.0.0
