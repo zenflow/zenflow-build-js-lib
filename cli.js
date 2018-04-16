@@ -10,6 +10,7 @@ buildJsLib({
     {
       debug: false,
       prod: false,
+      watch: false,
     },
     minimist(process.argv.slice(2)),
   ),
