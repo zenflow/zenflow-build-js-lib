@@ -63,7 +63,7 @@
     "jest": "^22.4.2",
     "p-memoize": "^1.0.0",
     "ramda": "^0.25.0",
-    "recursive-copy": "^2.0.9",
+    "recursive-copy": "2.0.9",
     "semantic-release": "^15.1.2",
     "tempy": "^0.2.1",
     "zenflow-lint-js": "^2.0.0"
