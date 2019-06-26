@@ -59,7 +59,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.1",
     "@semantic-release/git": "^4.0.2",
-    "execa": "^0.10.0",
+    "execa": "^2.0.1",
     "jest": "^22.4.2",
     "p-memoize": "^1.0.0",
     "ramda": "^0.25.0",
